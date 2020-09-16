@@ -1,5 +1,6 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
   toDoInput = toDoForm.querySelector("input"),
+  toDoSpan = toDoForm.querySelector("span"),
   toDoList = document.querySelector(".js-toDoList");
 
 const TODOS_LS = "toDos";
@@ -10,8 +11,8 @@ function deleteToDo(event) {
   const btn = event.target;
   const li = btn.parentNode;
   toDoList.removeChild(li);
-  const cleanToDos = toDos.filter(() => {
-    return toDos.id !== parseInt(li.id);
+  const cleanToDos = toDos.filter((toDoObj) => {
+    return toDoObj.id !== parseInt(li.id);
   });
   toDos = cleanToDos;
   saveToDos();
@@ -46,6 +47,7 @@ function handleSubmit(event) {
   const currentValue = toDoInput.value;
   paintToDo(currentValue);
   toDoInput.value = "";
+  toDoSpan.classList.remove("todo");
 }
 
 function loadTodos() {
@@ -57,10 +59,19 @@ function loadTodos() {
     });
   }
 }
+function showText() {
+  toDoSpan.classList.add("todo");
+}
 
+function textReshow() {
+  toDoSpan.classList.remove("todo");
+  toDoInput.value = "";
+}
 function init() {
   loadTodos();
   toDoForm.addEventListener("submit", handleSubmit);
+  toDoInput.addEventListener("keydown", showText);
+  toDoInput.addEventListener("blur", textReshow);
 }
 
 init();
