@@ -1,0 +1,176 @@
+.color {
+  width: 500px;
+  height: 40px;
+  background: none;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  padding: 0px 5px;
+}
+.color div {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+@keyframes moveBlack {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-45px);
+  }
+}
+@keyframes moveGray {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-90px);
+  }
+}
+@keyframes moveWhite {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-135px);
+  }
+}
+@keyframes moveBlue {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-180px);
+  }
+}
+@keyframes moveRed {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-225px);
+  }
+}
+@keyframes moveYellow {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-270px);
+  }
+}
+@keyframes moveGreen {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-315px);
+  }
+}
+@keyframes movePink {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-360px);
+  }
+}
+@keyframes moveOrange {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-405px);
+  }
+}
+@keyframes movePurple {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-450px);
+  }
+}
+.color div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  font-size: 17px;
+  z-index: 99;
+}
+.black {
+  background: black;
+  animation: moveBlack 0.3s linear forwards;
+}
+.gray {
+  background: gray;
+  animation: moveGray 0.3s linear forwards;
+}
+.white {
+  background-color: white;
+  animation: moveWhite 0.3s linear forwards;
+}
+.blue {
+  background: blue;
+  animation: moveBlue 0.3s linear forwards;
+}
+.red {
+  background: red;
+  animation: moveRed 0.3s linear forwards;
+}
+.yellow {
+  background: yellow;
+  animation: moveYellow 0.3s linear forwards;
+}
+.green {
+  background: green;
+  animation: moveGreen 0.3s linear forwards;
+}
+.pink {
+  background: pink;
+  animation: movePink 0.3s linear forwards;
+}
+.orange {
+  background: orange;
+  animation: moveOrange 0.3s linear forwards;
+}
+.purple {
+  background: purple;
+  animation: movePurple 0.3s linear forwards;
+}
+
+.cblack {
+  color: black;
+}
+.cgray {
+  color: gray;
+}
+.cwhite {
+  color: white;
+}
+.cblue {
+  color: blue;
+}
+.cred {
+  color: red;
+}
+.cyellow {
+  color: yellow;
+}
+.cgreen {
+  color: green;
+}
+.cpink {
+  color: pink;
+}
+.corange {
+  color: orange;
+}
+.cpurple {
+  color: purple;
+}
